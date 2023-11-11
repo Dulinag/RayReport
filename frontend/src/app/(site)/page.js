@@ -6,7 +6,6 @@ export default function Home() {
   <>
   
   
-  <h1>ray report</h1>
 
   <Chat/>
   
