@@ -40,8 +40,16 @@ https://docs.google.com/presentation/d/1lS5ZAYUY6byKdD-ql-8axp-PTdYk6iP6ZlDGdjML
 - Dulina Gunasekara: [Dulina Gunasekara's Github](https://github.com/Dulinag)
 - Matthew Shvorin: [Matthew Shvorin's Github](https://github.com/mshvorin)
 - Aurnab Das: [Aurnab Das's Github](https://github.com/aurnabdas)
-- Mahathir Rojan: [Mahathir Rojan's Github](https://github.com/mahathirrojan)
+- Mahathir Rojan: [Mahathir Rojan's Github](https://github.com/mahathirrojan)![Screenshot 2023-11-12 at 05-17-13 Create Next App]
+
 
 ## Acknowledgments
 
 We would like to express our gratitude to the organizers of Hack Princeton 2023 for providing this exciting opportunity.
+
+
+##Pictures
+![Uploading Screenshot 2023-11-12 at 05-17-13 Create Next App.png…]()
+(https://github.com/Dulinag/RayReport/assets/83606238/64ff27b6-f06f-448a-b60c-8ac2b674b08a)
+
+
