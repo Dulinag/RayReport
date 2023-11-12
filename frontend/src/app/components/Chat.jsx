@@ -14,6 +14,7 @@ function Chat() {
 
   const [zipCode, setZipCode] = useState('');
   const [uvIndexData, setUVIndexData] = useState(null);
+  
   const fetchUVData = async () => {
     try {
       // Fetch latitude and longitude from OpenWeatherMap reverse geocoding API
@@ -84,9 +85,27 @@ function Chat() {
               <div className="ml-2 font-bold text-2xl">RayReport</div>
             </div>
             <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div class = " flex justify-center items-center italic text-zinc-800">NEW YORK CITY</div>
+              <div className="h-20 w-20 rounded-full border overflow-hidden">
+                
+                <img
+                  src="https://i.insider.com/5ad8ae04cd862425008b4898?width=700"
+                  alt="Avatar"
+                  className="h-full w-full"
+
+                />
+
+              </div>
+
+            </div>
+
+
+            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div class = " flex justify-center items-center italic text-zinc-800">LOS ANGELOS</div>
+
               <div className="h-20 w-20 rounded-full border overflow-hidden">
                 <img
-                  src="https://www.goodhealthsaunas.com/wp-content/uploads/2018/01/GHS-Article-Sun-Rays-1400x937.jpg"
+                  src="https://www.telegraph.co.uk/content/dam/Travel/2019/June/la-observatory.jpg"
                   alt="Avatar"
                   className="h-full w-full"
                 />
@@ -94,7 +113,59 @@ function Chat() {
 
               </div>
             </div>
+
+
+            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div class = " flex justify-center items-center italic text-zinc-800">MIAMI</div>
+
+              <div className="h-20 w-20 rounded-full border overflow-hidden">
+                <img
+                  src="https://thumbs.dreamstime.com/b/miami-beach-florida-usa-ocean-drive-74275357.jpg"
+                  alt="Avatar"
+                  className="h-full w-full"
+                />
+
+
+              </div>
+            </div>
+
+
+
+            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div class = " flex justify-center items-center italic text-zinc-800">CHICAGO</div>
+
+              <div className="h-20 w-20 rounded-full border overflow-hidden">
+                <img
+                  src="https://erepublic.brightspotcdn.com/dims4/default/13ede82/2147483647/strip/false/crop/1000x664+0+0/resize/1000x664!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2Fb5%2F48%2F0fd02b1c4df7acadea1470bd37c8%2Fshutterstock-84639565.jpg"
+                  alt="Avatar"
+                  className="h-full w-full"
+                />
+
+
+              </div>
+            </div>
+
+
+
+
+
+            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div class = " flex justify-center items-center italic text-zinc-800">BOSTON</div>
+
+              <div className="h-20 w-20 rounded-full border overflow-hidden">
+                <img
+                  src="https://media.istockphoto.com/id/1336879395/photo/boston-massachusetts-usa-skyline-over-boston-common.jpg?s=612x612&w=0&k=20&c=JLq8oarT8Vz26QUyXIHWPajJ25qefWS40Et_771RDkk="
+                  alt="Avatar"
+                  className="h-full w-full"
+                />
+
+
+              </div>
+            </div>
+            
           </div>
+
+          
 
           
           <div className="flex flex-col flex-auto h-full p-6">
