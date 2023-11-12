@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { getUVData } from '../api/api';
 import axios from 'axios';
 import CenterText from '../components/CenterText'
+import Response from './Response';
 
 
 
@@ -16,6 +17,8 @@ function Chat() {
   const [uvIndexData, setUVIndexData] = useState(null);
   const [showCenterText, setShowCenterText] = useState(true); // Added state to control visibility
   const [data, setData] = useState(true); // Added state to control visibility
+  const [cityValue, setCityValue] = useState("");
+  
   
   const fetchUVData = async () => {
     try {
@@ -25,9 +28,11 @@ function Chat() {
       );
   
       const location = geocodingResponse.data;
-      setData(location)
+      
   
       console.log('Geocoding Response:', location);
+      const cityValue = location.name;
+      setCityValue(cityValue)
   
       if (!location || !location.lat || !location.lon) {
         console.error('Location not found for the provided ZIP code');
@@ -288,6 +293,7 @@ function Chat() {
           </div>
         </div>
       </div>
+      <Response uvvalue={uvIndexData} city={cityValue}/>
     </>
   );
 }
