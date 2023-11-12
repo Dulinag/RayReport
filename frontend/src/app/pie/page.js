@@ -3,14 +3,12 @@ import Chat from '../components/Chat'
 import CenterText from '../components/CenterText'
 import { Chart } from '../components/Chart'
 
-
-export default function Home() {
+export default function Pie() {
   return (
   <>
   
   
-  <Chat/>
-  
+<Chart/>  
   </>
   )
 }
