@@ -6,7 +6,7 @@ import CenterText from '../components/CenterText'
 
 
 
-const OPENUV_API_KEY = 'openuv-g05efkrlounj9zh-io';
+const OPENUV_API_KEY = 'openuv-g05efkrlov2wwuu-io';
 const OPENWEATHERMAP_API_KEY = '610c1366e1aa6b9cee0b4a4816923839';
 
 
@@ -14,6 +14,7 @@ function Chat() {
 
   const [zipCode, setZipCode] = useState('');
   const [uvIndexData, setUVIndexData] = useState(null);
+  const [open, setOpen] = useState(null);
   const [showCenterText, setShowCenterText] = useState(true); // Added state to control visibility
   
   const fetchUVData = async () => {
@@ -26,6 +27,8 @@ function Chat() {
       const location = geocodingResponse.data;
   
       console.log('Geocoding Response:', location);
+
+      setOpen(location)
   
       if (!location || !location.lat || !location.lon) {
         console.error('Location not found for the provided ZIP code');
@@ -188,9 +191,18 @@ function Chat() {
 
             {uvIndexData && (
   <div className="flex items-center justify-center h-screen">
+
+    <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-4">UV Index Data for {open.name} {open.zip}: </h2>
+
+<p className=" text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>
     <div className="bg-grey-400 text-white p-8 rounded-lg shadow-lg">
+      
+      
       <h2 className="text-2xl font-bold mb-4">UV Index Data</h2>
       <p className="text-lg">UV Index: {uvIndexData.uv}</p>
+
+
     </div>
   </div>
 )}
