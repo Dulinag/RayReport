@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { getUVData } from '../api/api';
 import axios from 'axios';
+import CenterText from '../components/CenterText'
+
 
 
 const OPENUV_API_KEY = 'openuv-g05efkrlounj9zh-io';
@@ -97,6 +99,9 @@ function Chat() {
           
           <div className="flex flex-col flex-auto h-full p-6">
             <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
+
+            <CenterText/>
+
             {uvIndexData && (
   <div className="flex items-center justify-center h-screen">
     <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
