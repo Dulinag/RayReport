@@ -31,6 +31,10 @@ Our project integrates three powerful APIs to enhance its functionality:
 
 Deployment and how to access it here
 
+## Slides
+
+https://docs.google.com/presentation/d/1lS5ZAYUY6byKdD-ql-8axp-PTdYk6iP6ZlDGdjMLlVM/edit#slide=id.p
+
 ## Contributors
 
 - Dulina Gunasekara: [Dulina Gunasekara's Github](https://github.com/Dulinag)
