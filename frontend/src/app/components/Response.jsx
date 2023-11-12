@@ -10,7 +10,7 @@ useEffect(()=>{
     const fetchData = async () => 
         {
         const openai = new OpenAI({
-            apiKey: "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", dangerouslyAllowBrowser: true // This is also the default, can be omitted
+            apiKey: "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", dangerouslyAllowBrowser: true // This is also the default, can be omitted
         });
 
         try{

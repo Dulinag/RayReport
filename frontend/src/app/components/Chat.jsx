@@ -7,7 +7,7 @@ import Response from './Response';
 
 
 
-const OPENUV_API_KEY = 'openuv-g05efkrlov2wwuu-io';
+const OPENUV_API_KEY = 'openuv-g05efkrlov8r2w0-io';
 const OPENWEATHERMAP_API_KEY = '610c1366e1aa6b9cee0b4a4816923839';
 
 
@@ -54,6 +54,8 @@ function Chat() {
       const uvIndexData = uvResponse.data.result;
       setUVIndexData(uvIndexData);
       setShowCenterText(false); // Hide CenterText component after fetching UV data
+      setData(location)
+
     } catch (error) {
       console.error('Error fetching UV data:', error);
       setUVIndexData(null);
@@ -116,7 +118,7 @@ function Chat() {
             <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
   <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
   <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
-            <div class = " flex justify-center items-center italic text-zinc-800">LOS ANGELOS</div>
+            <div class = " flex justify-center items-center italic text-zinc-800">LOS ANGELES</div>
 
               <div className="h-20 w-20 rounded-full border overflow-hidden">
                 <img
@@ -195,14 +197,21 @@ function Chat() {
             {showCenterText && <CenterText />}
 
             {uvIndexData && (
-  <div className="flex items-center justify-center h-screen">
-    <div className="bg-gray-100 rounded-full p-8 relative overflow-hidden">
-          <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 left-0 transform -rotate-45"></div>
-          <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 right-0 transform rotate-45"></div>
-      <h2 className="text-2xl font-bold mb-4 text-gray-600">UV Index Data for {data.name} {data.zip} </h2>
-      <p className=" text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>   </div>
+  <div className="flex flex-col items-center justify-center h-screen">
+    <div className="bg-gray-100 rounded-full p-8 relative overflow-hidden mb-8">
+      <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 left-0 transform -rotate-45"></div>
+      <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 right-0 transform rotate-45"></div>
+      <h2 className="text-2xl font-bold mb-4 text-gray-600">UV Index Data for {data.name} {data.zip}</h2>
+      <p className="text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>
+    </div>
+
+
+    <div class = "italic text-2xl font-bold flex justify-center items-center text-center pb-10">
+      <Response uvvalue={uvIndexData} city={cityValue} />
+    </div>
   </div>
 )}
+
 
               <div
                 className="flex flex-row items-center h-16 rounded-xl bg-white w-full px-4 mt-auto"
@@ -295,7 +304,7 @@ function Chat() {
           </div>
         </div>
       </div>
-      <Response uvvalue={uvIndexData} city={cityValue}/>
+     
     </>
   );
 }
