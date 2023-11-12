@@ -49,7 +49,6 @@ We would like to express our gratitude to the organizers of Hack Princeton 2023 
 
 
 ##Pictures
-![Uploading Screenshot 2023-11-12 at 05-17-13 Create Next App.png…]()
-(https://github.com/Dulinag/RayReport/assets/83606238/64ff27b6-f06f-448a-b60c-8ac2b674b08a)
+
 
 
