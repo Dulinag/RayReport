@@ -196,8 +196,10 @@ function Chat() {
 
             {uvIndexData && (
   <div className="flex items-center justify-center h-screen">
-    <div className="bg-grey-400 text-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4">UV Index Data for {data.name} {data.zip} </h2>
+    <div className="bg-gray-100 rounded-full p-8 relative overflow-hidden">
+          <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 left-0 transform -rotate-45"></div>
+          <div className="absolute w-16 h-8 bg-gray-100 rounded-full top-0 right-0 transform rotate-45"></div>
+      <h2 className="text-2xl font-bold mb-4 text-gray-600">UV Index Data for {data.name} {data.zip} </h2>
       <p className=" text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>   </div>
   </div>
 )}
