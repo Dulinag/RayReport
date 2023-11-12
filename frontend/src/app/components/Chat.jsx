@@ -61,12 +61,12 @@ function Chat() {
 
   return (
     <>
-      <div className="flex h-screen antialiased text-gray-800">
+      <div className="flex h-screen antialiased text-gray-800 bg-sky-300">
         <div className="flex flex-row h-full w-full overflow-x-hidden">
-          <div className="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
+          <div className="flex flex-col py-8 pl-6 pr-2 w-64 bg-sky-300 flex-shrink-0">
             <div className="flex flex-row items-center justify-center h-12 w-full">
               <div
-                className="flex items-center justify-center rounded-2xl text-indigo-700 bg-indigo-100 h-10 w-10"
+                className="flex items-center justify-center rounded-2xl text-white bg-yellow-300 h-10 w-10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -88,9 +88,11 @@ function Chat() {
                   <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
                 </svg>
               </div>
-              <div className="ml-2 font-bold text-2xl">RayReport</div>
+              <div className="ml-2 font-bold text-2xl text-white">RayReport</div>
             </div>
-            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
+  <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
+  <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
             <div class = " flex justify-center items-center italic text-zinc-800">NEW YORK CITY</div>
               <div className="h-20 w-20 rounded-full border overflow-hidden">
                 
@@ -106,7 +108,9 @@ function Chat() {
             </div>
 
 
-            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
+  <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
+  <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
             <div class = " flex justify-center items-center italic text-zinc-800">LOS ANGELOS</div>
 
               <div className="h-20 w-20 rounded-full border overflow-hidden">
@@ -121,7 +125,9 @@ function Chat() {
             </div>
 
 
-            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
+  <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
+  <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
             <div class = " flex justify-center items-center italic text-zinc-800">MIAMI</div>
 
               <div className="h-20 w-20 rounded-full border overflow-hidden">
@@ -137,7 +143,9 @@ function Chat() {
 
 
 
-            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
+  <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
+  <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
             <div class = " flex justify-center items-center italic text-zinc-800">CHICAGO</div>
 
               <div className="h-20 w-20 rounded-full border overflow-hidden">
@@ -155,7 +163,9 @@ function Chat() {
 
 
 
-            <div className="flex flex-col items-center bg-indigo-100 border border-gray-200 mt-4 w-full py-6 px-4 rounded-lg">
+            <div className="relative flex flex-col items-center bg-white border border-gray-300 mt-4 w-full py-6 px-4 rounded-full overflow-hidden">
+  <div className="absolute w-20 h-10 bg-gray-300 rounded-full -top-6"></div>
+  <div className="absolute w-24 h-12 bg-gray-300 rounded-full -top-8"></div>
             <div class = " flex justify-center items-center italic text-zinc-800">BOSTON</div>
 
               <div className="h-20 w-20 rounded-full border overflow-hidden">
@@ -175,15 +185,24 @@ function Chat() {
 
           
           <div className="flex flex-col flex-auto h-full p-6">
-            <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
+            <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gradient-to-t from-white to-yellow-300 h-full p-4">
 
             {showCenterText && <CenterText />}
 
             {uvIndexData && (
   <div className="flex items-center justify-center h-screen">
+
     <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4">UV Index Data for {open.name} {open.zip}: </h2>
-      <p className=" text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>
+
+<p className=" text-2xl font-bold flex justify-center items-center text-center ">{uvIndexData.uv}</p>
+    <div className="bg-grey-400 text-white p-8 rounded-lg shadow-lg">
+      
+      
+      <h2 className="text-2xl font-bold mb-4">UV Index Data</h2>
+      <p className="text-lg">UV Index: {uvIndexData.uv}</p>
+
+
     </div>
   </div>
 )}
@@ -244,7 +263,7 @@ function Chat() {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <button onClick={fetchUVData} className="flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-xl text-white px-4 py-1 flex-shrink-0">
+                  <button onClick={fetchUVData} className="flex items-center justify-center bg-blue-300 hover:bg-orange-500 rounded-xl text-white px-4 py-1 flex-shrink-0">
                     <span> Send</span>
 
                     <div>
