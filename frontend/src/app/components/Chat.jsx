@@ -14,6 +14,7 @@ function Chat() {
 
   const [zipCode, setZipCode] = useState('');
   const [uvIndexData, setUVIndexData] = useState(null);
+  const [showCenterText, setShowCenterText] = useState(true); // Added state to control visibility
   
   const fetchUVData = async () => {
     try {
@@ -45,9 +46,11 @@ function Chat() {
   
       const uvIndexData = uvResponse.data.result;
       setUVIndexData(uvIndexData);
+      setShowCenterText(false); // Hide CenterText component after fetching UV data
     } catch (error) {
       console.error('Error fetching UV data:', error);
       setUVIndexData(null);
+      setShowCenterText(true); // Hide CenterText component after fetching UV data
     }
   };
   
@@ -171,7 +174,7 @@ function Chat() {
           <div className="flex flex-col flex-auto h-full p-6">
             <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-gray-100 h-full p-4">
 
-            <CenterText/>
+            {showCenterText && <CenterText />}
 
             {uvIndexData && (
   <div className="flex items-center justify-center h-screen">
